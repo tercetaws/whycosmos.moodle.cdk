@@ -1,0 +1,27 @@
+{
+  "app": "npx ts-node --prefer-ts-exts bin/cdk.ts",
+  "context": {
+    "@aws-cdk/aws-apigateway:usagePlanKeyOrderInsensitiveId": true,
+    "aws-cdk:enableDiffNoFail": "true",
+    "@aws-cdk/core:stackRelativeExports": "true",
+    "@aws-cdk/aws-ecr-assets:dockerIgnoreSupport": true,
+    "@aws-cdk/aws-kms:defaultKeyPolicies": true,
+    "@aws-cdk/aws-s3:grantWriteWithoutAcl": true,
+    "@aws-cdk/aws-ecs-patterns:removeDefaultDesiredCount": true,
+    "@aws-cdk/aws-rds:lowercaseDbIdentifier": true,
+    "@aws-cdk/aws-lambda:recognizeVersionProps": true,
+    "@aws-cdk/aws-cloudfront:defaultSecurityPolicyTLSv1.2_2021": true,
+    "@aws-cdk/custom-resources:installLatestAwsSdkNotSpecified":false,
+    "app-config/albCertificateArn": "arn:aws:acm:us-east-1:890742611012:certificate/fb5c0bcf-e6f0-4d3b-bb29-971a113d5b5a",
+    "app-config/cfCertificateArn": "arn:aws:acm:us-east-1:890742611012:certificate/7d67ee03-73fd-4683-bb0d-59797776241e",
+    "app-config/cfDomain": "classes.whycosmos.com",
+    "app-config/moodleImageRepository": "moodle-image",
+    "app-config/moodleImageUri": "890742611012.dkr.ecr.us-east-1.amazonaws.com/moodle-image",
+    "app-config/serviceReplicaDesiredCount": 1,
+    "app-config/serviceHealthCheckGracePeriodSeconds": 1800,
+    "app-config/cfDistributionOriginTimeoutSeconds": 60,
+    "app-config/rdsEventSubscriptionEmailAddress": "contact@whycosmos.com",
+    "app-config/rdsInstanceType": "t3.micro",
+    "app-config/elastiCacheRedisInstanceType": "cache.t4g.micro"
+  }
+}
