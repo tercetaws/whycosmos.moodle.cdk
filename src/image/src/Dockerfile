@@ -2,7 +2,7 @@ FROM bitnami/moodle:latest
 RUN apt-get update -y
 
 # Install PHP Redis
-RUN apt-get install -y autoconf gosu wget build-essential && \
+RUN apt-get install -y autoconf gosu wget unzip build-essential && \
     wget https://pecl.php.net/get/redis-6.2.0.tgz && \
     tar xzf redis-6.2.0.tgz && \
     cd redis-6.2.0 && \
